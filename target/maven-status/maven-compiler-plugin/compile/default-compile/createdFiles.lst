@@ -1,0 +1,5 @@
+com/wipro/Pageobjects/Homepage.class
+com/wipro/Resources/ExtentReporterNG.class
+com/wipro/Resources/BaseTest.class
+com/wipro/Pageobjects/Reviewpage.class
+com/wipro/Pageobjects/Bookingpage.class

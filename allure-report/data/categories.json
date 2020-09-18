@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "The step \"End user is in the home page of Goibibo\" is undefined. You can implement it using the snippet(s) below:\n\n@Given(\"End user is in the home page of Goibibo\")\npublic void end_user_is_in_the_home_page_of_goibibo() {\n    // Write code here that turns the phrase above into concrete actions\n    throw new io.cucumber.java.PendingException();\n}\n",
+      "children" : [ {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "6c75498eac4beb82",
+        "parentUid" : "96a48455f4959be833a6e2bfb89320ef",
+        "status" : "broken",
+        "time" : {
+          "start" : 1595610217731,
+          "stop" : 1595610217965,
+          "duration" : 234
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Verify home page details are filled\"", "\"Optional[Fill Homepage Details]\"" ]
+      } ],
+      "uid" : "96a48455f4959be833a6e2bfb89320ef"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

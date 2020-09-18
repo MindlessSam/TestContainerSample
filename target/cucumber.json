@@ -1,0 +1,98 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-09-15T16:29:31.267Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 83\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Sams-MBP.domain.name\u0027, ip: \u0027fe80:0:0:0:492:28de:7756:4ac7%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.5\u0027, java.version: \u00271.8.0_252\u0027\nDriver info: driver.version: ChromeDriver\nremote stacktrace: 0   chromedriver                        0x0000000107166e99 chromedriver + 4808345\n1   chromedriver                        0x00000001071015f3 chromedriver + 4392435\n2   chromedriver                        0x0000000106d8d29d chromedriver + 770717\n3   chromedriver                        0x0000000106cea689 chromedriver + 104073\n4   chromedriver                        0x0000000106ce6940 chromedriver + 88384\n5   chromedriver                        0x0000000106ce3c99 chromedriver + 76953\n6   chromedriver                        0x0000000106d15fa3 chromedriver + 282531\n7   chromedriver                        0x0000000106d12da3 chromedriver + 269731\n8   chromedriver                        0x0000000106cec8dd chromedriver + 112861\n9   chromedriver                        0x0000000106ced875 chromedriver + 116853\n10  chromedriver                        0x000000010712947f chromedriver + 4555903\n11  chromedriver                        0x000000010713677a chromedriver + 4609914\n12  chromedriver                        0x0000000107136509 chromedriver + 4609289\n13  chromedriver                        0x000000010710d319 chromedriver + 4440857\n14  chromedriver                        0x0000000107136d03 chromedriver + 4611331\n15  chromedriver                        0x000000010711f083 chromedriver + 4513923\n16  chromedriver                        0x000000010714d454 chromedriver + 4703316\n17  chromedriver                        0x000000010716cf57 chromedriver + 4833111\n18  libsystem_pthread.dylib             0x00007fff6cca3109 _pthread_start + 148\n19  libsystem_pthread.dylib             0x00007fff6cc9eb8b thread_start + 15\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)\n\tat java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)\n\tat java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)\n\tat java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:123)\n\tat com.wipro.Resources.BaseTest.initializeDriver(BaseTest.java:73)\n\tat com.wipro.witaas.Goibibo.Goibibo_workflow.initialize(Goibibo_workflow.java:34)\n",
+              "duration": 7777000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.wipro.witaas.Goibibo.Goibibo_workflow.initialize()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Verify home page details are filled",
+        "description": "",
+        "id": "fill-homepage-details;verify-home-page-details-are-filled",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.wipro.witaas.Goibibo.Goibibo_workflow.teardown(Goibibo_workflow.java:126)\n",
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.wipro.witaas.Goibibo.Goibibo_workflow.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "End user is in the home page of Goibibo",
+            "match": {
+              "location": "com.wipro.witaas.Goibibo.Goibibo_workflow.end_user_is_in_the_home_page_of_goibibo()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "End user fill all the data",
+            "match": {
+              "location": "com.wipro.witaas.Goibibo.Goibibo_workflow.end_user_fill_all_the_data()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "End user should fill all the details",
+            "match": {
+              "location": "com.wipro.witaas.Goibibo.Goibibo_workflow.end_user_should_fill_all_the_details()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Fill Homepage Details",
+    "description": "  I want to use this template for verify my Home page details filling",
+    "id": "fill-homepage-details",
+    "keyword": "Feature",
+    "uri": "classpath:first.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
