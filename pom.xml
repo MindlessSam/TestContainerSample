@@ -2,7 +2,22 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>Cucumber_Selenium</groupId>
   <artifactId>CucumberFramework</artifactId>
-  <version>0.0.1-SNAPSHOT</version> 
+  <version>0.0.1-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.11</source>
+                    <target>1.11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 <dependencies>
 
@@ -13,13 +28,13 @@
     <version>3.141.59</version>
 </dependency>
 
-  <!-- https://mvnrepository.com/artifact/junit/junit -->
-<dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.13</version>
-    <scope>test</scope>
-</dependency>
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.7.2</version>
+        <scope>test</scope>
+    </dependency>
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependency>
@@ -67,98 +82,62 @@
     <version>4.1.0</version>
 </dependency>
 
-    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber4-jvm -->
-    <dependency>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-cucumber4-jvm</artifactId>
-        <version>2.13.5</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
-    <dependency>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-junit4</artifactId>
-        <version>${allure-junit4.version}</version>
-        <scope>test</scope>
-    </dependency>
     <!-- https://mvnrepository.com/artifact/org.testcontainers/postgresql -->
     <dependency>
         <groupId>org.testcontainers</groupId>
         <artifactId>postgresql</artifactId>
-        <version>1.14.3</version>
-        <scope>test</scope>
+        <version>1.16.0</version>
+        <scope>runtime</scope>
     </dependency>
+
 
     <!-- https://mvnrepository.com/artifact/org.testcontainers/junit-jupiter -->
     <dependency>
         <groupId>org.testcontainers</groupId>
         <artifactId>junit-jupiter</artifactId>
-        <version>1.14.3</version>
+        <version>1.16.0</version>
         <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.23</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/org.testcontainers/jdbc -->
+    <dependency>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>jdbc</artifactId>
+        <version>1.16.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.testcontainers/testcontainers -->
     <dependency>
         <groupId>org.testcontainers</groupId>
         <artifactId>testcontainers</artifactId>
-        <version>1.14.3</version>
+        <version>1.16.0</version>
         <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.testcontainers/selenium -->
     <dependency>
         <groupId>org.testcontainers</groupId>
         <artifactId>selenium</artifactId>
-        <version>1.14.3</version>
+        <version>1.16.0</version>
         <scope>test</scope>
     </dependency>
 
-</dependencies>
-    <properties>
-        <aspectj.version>1.9.6</aspectj.version>
-        <allure-junit4.version>2.13.5</allure-junit4.version>
-        <allure.version>2.10.0</allure.version>
-    </properties>
+    <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+    <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>5.0.0</version>
+    </dependency>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
-                <configuration>
-                    <includes>
-                        <include>**/RunCucumberTest.java</include>
-                    </includes>
-                    <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                        -Dcucumber.options="--plugin io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"
-                    </argLine>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>${allure.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                        <configuration>
-                            <reportVersion>${allure.version}</reportVersion>
-                            <allureDownloadUrl>https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/${allure.version}/allure-commandline-${allure.version}.zip</allureDownloadUrl>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+
+</dependencies>
+
 
   </project>
 
