@@ -32,7 +32,7 @@ public class SamplePostgresSQLTest extends AbstractContainerDatabaseTest {
         ResultSet resultSet = performQuery(postgres, "SELECT 1");
         int resultSetInt = resultSet.getInt(1);
         System.out.println("ResultSet : " + resultSetInt);
-        assertEquals(1, resultSetInt,"A basic SELECT query succeeds");
+        assertEquals(1, resultSetInt, "A basic SELECT query succeeds");
     }
 
 
@@ -60,5 +60,17 @@ public class SamplePostgresSQLTest extends AbstractContainerDatabaseTest {
         assertNotEquals(changedValue, "Hit", "Value from init script should equal real value");
     }
 
+    @Test
+    public void testCommandOverride() throws SQLException {
+        postgres.withCommand("postgres -c max_connections=42");
+        postgres.start();
+        ResultSet resultSet = performQuery(postgres, "SELECT current_setting('max_connections')");
+        String result = resultSet.getString(1);
+        System.out.println("Result set : "+result);
+        assertEquals(result, "42","max_connections should be overriden");
+    }
 
 }
+
+
+

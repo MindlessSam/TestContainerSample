@@ -20,11 +20,10 @@ public abstract class AbstractContainerDatabaseTest {
         return resultSet;
     }
 
-    protected ResultSet performQueryUpdate(JdbcDatabaseContainer<?> container, String sql) throws SQLException {
+    protected void performQueryUpdate(JdbcDatabaseContainer<?> container, String sql) throws SQLException {
         DataSource ds = getDataSource(container);
         Statement statement = ds.getConnection().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
         statement.executeUpdate(sql);
-        return statement.getResultSet();
     }
 
     protected DataSource getDataSource(JdbcDatabaseContainer<?> container) {
